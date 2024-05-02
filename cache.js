@@ -9,6 +9,7 @@ const playwright = require('playwright');
     waitUntil: 'load' // Waits until no network activity for 500 ms
   });
 
+  await page.waitForTimeout(30000);
   // Get the full HTML of the page
   const html = await page.content();
 
