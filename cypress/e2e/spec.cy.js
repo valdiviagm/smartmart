@@ -1,7 +1,8 @@
-describe('My Web Page Test', () => {
-  it('successfully loads and checks for the existence of element with ID \'app\'', () => {
-      
+// const { script } = require('../../src/logic');
 
+describe('My Web Page Test', () => {
+  it('successfully loads and checks for the proper computation of price per unit of product', () => {
+      
     cy.on('uncaught:exception', (err, runnable) => {
       return false;
     });
@@ -14,16 +15,21 @@ describe('My Web Page Test', () => {
       const description = $description.text();
       cy.log('Product description: ', description);
       expect(description).to.equal('Leche de vaca Granja 3 bolsas de 900 ml c/u');
+
     });
 
+    
     cy.readFile('src/logic.js').then((scriptContent) => {
       cy.window().then((win) => {
           
           win.eval(scriptContent);
           
           win.script();
+
+          //win.script = script
+          //win.script();
       });
-  });
+    });
 
     cy.window().then((win) => {
     
@@ -43,12 +49,8 @@ describe('My Web Page Test', () => {
       targetDocument.body.appendChild(app);
     }
 
-    function helloWorld() {
-      console.log('Hello, World');
-      console.log(document)
-    }
-
-    app.onclick = helloWorld;
+    //app.onclick =  script;
+    // app.click()
 
     });
 

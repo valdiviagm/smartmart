@@ -184,8 +184,9 @@ function injectPricePerUnit( priceItem, pricePerUnit ) {
 
 
 
+//module.exports.script = function() {
 
-export function script() {
+function script() {
                
         ( function (){
             
@@ -252,5 +253,4 @@ export function script() {
         
 }
 
-// To make this function available to other scripts or Cypress specs
-window.script = script;
+window.script = script
