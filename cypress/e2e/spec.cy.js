@@ -1,5 +1,3 @@
-// const { script } = require('../../src/logic');
-
 describe('My Web Page Test', () => {
   it('successfully loads and checks for the proper computation of price per unit of product', () => {
       
@@ -23,11 +21,8 @@ describe('My Web Page Test', () => {
       cy.window().then((win) => {
           
           win.eval(scriptContent);
-          
           win.script();
 
-          //win.script = script
-          //win.script();
       });
     });
 
