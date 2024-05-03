@@ -185,7 +185,7 @@ function injectPricePerUnit( priceItem, pricePerUnit ) {
 
 
 
-function script() {
+export function script() {
                
         ( function (){
             

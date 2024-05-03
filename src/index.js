@@ -1,6 +1,7 @@
 // index.js
 
-import { helloWorld } from './utils.js';
+// import { helloWorld } from './utils.js';
+import { script } from './logic.js';
 
 const app = document.querySelector('button#app');
 function main() {
@@ -9,7 +10,7 @@ function main() {
     if (app) {
         // Set up the button click event
         
-        app.onclick = helloWorld;
+        app.onclick = script;
         
         // Programmatically click the button
         app.click();

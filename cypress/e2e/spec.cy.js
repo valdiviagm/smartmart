@@ -16,7 +16,7 @@ describe('My Web Page Test', () => {
       expect(description).to.equal('Leche de vaca Granja 3 bolsas de 900 ml c/u');
     });
 
-    cy.readFile('cypress/e2e/logic.js').then((scriptContent) => {
+    cy.readFile('src/logic.js').then((scriptContent) => {
       cy.window().then((win) => {
           
           win.eval(scriptContent);
